@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body onload="load_items()">
+    <header>Link's Choice Adventure</header>
+
+    <section id="dialogue">
+        <p>The walk to the castle is tough. The road is steep and muddy from the rain. By the time you reach the castle
+            doors it is dark and you feel a storm brewing above your head.
+        </p>
+    </section>
+
+    <section id="items">
+        Items:
+        <i id='item_lives'><img class="item_img" src="images/heart.png" alt="heart"></i>
+        <i id='item_coins'><img class="item_img" src="images/coin.png" alt="coin"></i>
+        <i id='item_apples'><img class="item_img" src="images/apple.png" alt="apple"></i>
+        <i id='item_normal_sword'><img class="item_img" src="images/normal_sword.png" alt="normal sword"></i>
+        <i id='item_bow'><img class="item_img" src="images/bow.png" alt="bow"></i>
+        <i id='item_improved_bow'><img class="item_img" src="images/improved-bow.png" alt="improved bow"></i>
+        <i id='item_master_sword'><img class="item_img" src="images/master_sword.png" alt="master sword"></i>
+        <i id='item_lantern'><img class="item_img" src="images/lantern.png" alt="lantern"></i>
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div id="enter_castle"><span class="choice" onclick="enterCastle()">Go through the castle doors.</span></div>
+        <div id="head_back"><a class="choice" href="crossroads.html">Head back the way you came.</a></div>
+    </section>
+    
+    <script src="scripts/items.js"></script>
+    <script src="scripts/castle.js"></script>
+</body>
+</html>

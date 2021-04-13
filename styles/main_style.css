@@ -1,0 +1,64 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color: #533F18;
+}
+
+header {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+section {
+    text-align: left;
+    background-color: rgba(255, 255, 255, .5);
+    width: 80%;
+    margin: auto;
+    border: 9px groove #D5B54E;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 10px;
+    line-height: 25px;
+}
+
+.item_img {
+    width: 45px;
+}
+
+i {
+    margin-left: 20px;
+}
+
+#items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.centered_text {
+    text-align: center;
+}
+
+canvas {
+    margin-top: 30px;
+    border: 5px ridge yellow;
+    background: url('../images/dungeon.png');
+    border: 9px groove #D5B54E;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.choice {
+    text-decoration: none;
+    color: #551A8B;
+}
+
+.choice:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

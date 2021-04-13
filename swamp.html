@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body onload="load_items()">
+    <header>Link's Choice Adventure</header>
+
+    <section id="dialogue">
+        <p>As you walk deeper into the swamp your feet sink further and further into the layers of mud.
+            In some areas the mud gives way to pools of murky water that reach up above the top of your boots.
+        </p>
+
+        <p>Eventually you come to a clearing. Infront of you lies the entrance to the crumbling ruins of an ancient temple.
+            You can barley make out the cracked stone bricks behind the layers of moss and the meandering tree roots that have claimed 
+            the structure.
+        </p>
+
+        <p>To your right you see the mouth of a cave. The opening rises a foot above your head and is roughly half as wide.
+            From the entrance leaks cool, musty air that pricks your skin.
+        </p>
+    </section>
+
+    <section id="items">
+        Items:
+        <i id='item_lives'><img class="item_img" src="images/heart.png" alt="heart"></i>
+        <i id='item_coins'><img class="item_img" src="images/coin.png" alt="coin"></i>
+        <i id='item_apples'><img class="item_img" src="images/apple.png" alt="apple"></i>
+        <i id='item_normal_sword'><img class="item_img" src="images/normal_sword.png" alt="normal sword"></i>
+        <i id='item_bow'><img class="item_img" src="images/bow.png" alt="bow"></i>
+        <i id='item_improved_bow'><img class="item_img" src="images/improved-bow.png" alt="improved bow"></i>
+        <i id='item_master_sword'><img class="item_img" src="images/master_sword.png" alt="master sword"></i>
+        <i id='item_lantern'><img class="item_img" src="images/lantern.png" alt="lantern"></i>
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div><a class="choice" href="ruins.html">Enter the ruins.</a></div>
+        <div><a class="choice" href="pond/pond.html">Enter the cave.</a></div>
+        <div><a class="choice"href="crossroads.html">Head back the way you came.</a></div>
+    </section>
+
+    <script src="scripts/items.js"></script>
+</body>
+</html>

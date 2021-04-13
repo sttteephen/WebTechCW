@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body onload="load_items()">
+    <header>Link's Choice Adventure</header>
+
+    <section id="dialogue">
+        <p>Inside the fortune tellers hut is dimley lit. The center of the room is occupied by a long
+            table with a red cloth draped over it, flanked by two bronze braziers. On top of the table lies 
+            a large clear glass ball. On the other side of the table sits a figure draped in a purple robe. 
+            The hood covers most of the figures face so that you can only barley make out their mouth.
+        </p>
+        <p>"Hmmm..." says the figure. "Looks like you may have an interesting destiny. May I tell your fortune... 
+            I'll make it cheap. "</p>
+    </section>
+
+    <section id="items">
+        Items:
+        <i id='item_lives'><img class="item_img" src="images/heart.png" alt="heart"></i>
+        <i id='item_coins'><img class="item_img" src="images/coin.png" alt="coin"></i>
+        <i id='item_apples'><img class="item_img" src="images/apple.png" alt="apple"></i>
+        <i id='item_normal_sword'><img class="item_img" src="images/normal_sword.png" alt="normal sword"></i>
+        <i id='item_bow'><img class="item_img" src="images/bow.png" alt="bow"></i>
+        <i id='item_improved_bow'><img class="item_img" src="images/improved-bow.png" alt="improved bow"></i>
+        <i id='item_master_sword'><img class="item_img" src="images/master_sword.png" alt="master sword"></i>
+        <i id='item_lantern'><img class="item_img" src="images/lantern.png" alt="lantern"></i>
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div id="tell_fortune"><span class="choice" onclick="tellFortune()">Get you fortune told.</span></div>
+        <div><a class="choice" href="kakariko.html">Head back to the square.</a></div>
+    </section>
+
+    <script src="scripts/items.js"></script>
+</body>
+</html>

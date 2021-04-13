@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body onload="load_items()">
+    <header>Link's Choice Adventure</header>
+
+    <section id="dialogue">
+        <p>As you enter the blacksmiths you are hit with a wall of heat. A large fire place on the other side of the room roars, spewing 
+            glowing emebers onto the cobble floor.</p>
+
+        <p>"Greetings stangers." says the blacksmith looking up from the anvil he was working at. "I see that bow on your back, looks
+            like it has seen better days. I could make some major improvments for just 5 coins, just let me know."
+        </p>
+
+        <p>"Well that's me finished. You  should feel the difference straight away, and hey be careful where you point that thing."</p>
+    </section>
+
+    <section id="items">
+        Items:
+        <i id='item_lives'><img class="item_img" src="images/heart.png" alt="heart"></i>
+        <i id='item_coins'><img class="item_img" src="images/coin.png" alt="coin"></i>
+        <i id='item_apples'><img class="item_img" src="images/apple.png" alt="apple"></i>
+        <i id='item_normal_sword'><img class="item_img" src="images/normal_sword.png" alt="normal sword"></i>
+        <i id='item_bow'><img class="item_img" src="images/bow.png" alt="bow"></i>
+        <i id='item_improved_bow'><img class="item_img" src="images/improved-bow.png" alt="improved bow"></i>
+        <i id='item_master_sword'><img class="item_img" src="images/master_sword.png" alt="master sword"></i>
+        <i id='item_lantern'><img class="item_img" src="images/lantern.png" alt="lantern"></i>
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div><a class="choice" href="kakariko.html">Head back to the square.</a></div>
+    </section>
+
+    <script src="scripts/items.js"></script>
+    <script src="scripts/smith.js"></script>
+</body>
+</html>

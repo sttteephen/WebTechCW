@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body onload="load_items()">
+    <header>Link's Choice Adventure</header>
+
+    <section>
+        <div id="first_talk">
+            <p>"Excuse me"</p>
+            <p>He doesn't respond. Upon closer inspection you see the old mans eyes are closed and he is actually fast asleep. 
+                You give him a gentle tap on the shoulder.</p>
+            <p>"WAAA WHAAAT. Who's there!" He exclaims as his head shoots up and his arms start failing about him wildly.</p>
+            <p>"S-sorry, I didn't mean to spook you I was just wondering if you had ever heard of the master sword."</p>
+            <p>"Whats it to you kid."</p>
+            <p>"I need to find it to defeat Agahnim."</p>
+            <p>"Ahahahaha whatever you say kid. Look if I tell you what I know will you leave me alone."</p>
+            <p>"Definitely."</p>
+            <p>"Well ok then, legend has it the sword was crafted by the Gods themselves or something, meant to be super powerful. 
+                I remember a while back some adventurer came in here, said he'd tracked the sword down to somewhere in the swamp ruins and
+                was off to find it. Well that was years ago now don't think anyones heard from him since."</p>
+            <p>"That's great thanks!" You say. "Looks like I need to explore the ruins."</p>
+            <p>"Hey the ruins no place for a kid. If you're gonna go take this." The old man produces a small lantern from his jacket. 
+                "It'll be pitch black in there, and hey if you make it out be sure to tell me if you found your master sword ahahahaha."</p>
+        </div>
+
+    </section>
+
+    <section id="items">
+        Items:
+        <i id='item_lives'><img class="item_img" src="../images/heart.png" alt="heart"></i>
+        <i id='item_coins'><img class="item_img" src="../images/coin.png" alt="coin"></i>
+        <i id='item_apples'><img class="item_img" src="../images/apple.png" alt="apple"></i>
+        <i id='item_normal_sword'><img class="item_img" src="../images/normal_sword.png" alt="normal sword"></i>
+        <i id='item_bow'><img class="item_img" src="../images/bow.png" alt="bow"></i>
+        <i id='item_improved_bow'><img class="item_img" src="../images/improved-bow.png" alt="improved bow"></i>
+        <i id='item_master_sword'><img class="item_img" src="../images/master_sword.png" alt="master sword"></i>
+        <i id='item_lantern'><img class="item_img" src="../images/lantern.png" alt="lantern"></i>
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div><a class="choice" onclick="take_lantern()" href="inn.html">Take the lantern</a></div>
+    </section>
+
+    <script src="../scripts/items.js"></script>
+</body>
+</html>

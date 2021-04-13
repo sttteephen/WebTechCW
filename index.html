@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body>
+    <header>Link's Choice Adventure</header>
+
+    <section class="centered_text">
+        <p>Welcome to Link's choice adventure. Thanks for playing!</p>
+        <p>Help Link on his journey to defeat the evil wizard Agahnim and free princess Zelda.</p>
+        <p>Use the links below to explore the world and interact with it's inhabitants.</p>
+        <p>Your progress will be saved so you can come back to the story and pick up where you left off.</p>
+        <p>Enjoy!</p>
+
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div><a class="choice" href="intro.html" onclick="newStory()">START NEW GAME</a></div>
+        <div id="continue_story"><a class="choice" href="home.html">CONTINUE STORY</a></div>
+    </section>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>

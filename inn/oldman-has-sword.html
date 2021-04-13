@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body onload="load_items()">
+    <header>Link's Choice Adventure</header>
+
+    <section>
+        <div id="first_talk">
+            <p>"Excuse me" you say.</p>
+            <p>"Well well well look who it is. Did you find your Master Sword then." The old man says mockingly.</p>
+            <p>You pull the master sword from its sheath to show the old man.</p>
+            <p>His eyes fixate on the blue balde. "Oh my gods its real. Maybe you are the chosen one. Look kid I don't have much
+                but take this I hope it helps you along your journey."</p>
+            <p>From his pocket the old man produces a hand full of gold coins.</p>
+        </div>
+
+    </section>
+
+    <section id="items">
+        Items:
+        <i id='item_lives'><img class="item_img" src="../images/heart.png" alt="heart"></i>
+        <i id='item_coins'><img class="item_img" src="../images/coin.png" alt="coin"></i>
+        <i id='item_apples'><img class="item_img" src="../images/apple.png" alt="apple"></i>
+        <i id='item_normal_sword'><img class="item_img" src="../images/normal_sword.png" alt="normal sword"></i>
+        <i id='item_bow'><img class="item_img" src="../images/bow.png" alt="bow"></i>
+        <i id='item_improved_bow'><img class="item_img" src="../images/improved-bow.png" alt="improved bow"></i>
+        <i id='item_master_sword'><img class="item_img" src="../images/master_sword.png" alt="master sword"></i>
+        <i id='item_lantern'><img class="item_img" src="../images/lantern.png" alt="lantern"></i>
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div><a class="choice" onclick="take_coins()" href="inn.html">Take the coins</a></div>
+    </section>
+
+    <script src="../scripts/items.js"></script>
+</body>
+</html>

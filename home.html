@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link's Choice Adventure</title>
+</head>
+<body  onload="load_items()">
+    <header>Link's Choice Adventure</header>
+
+    <section id="dialogue">
+        <p>You stand in the middle of your small one room home that you share with your uncle. He's not in and must have already left.</p>
+        <p id="apple_para">On top of the small oak would table in the corner of your room sits an apple. Your uncle must have left it for you.</p>
+    </section>
+
+    <section id="items">
+        Items:
+        <i id='item_lives'><img class="item_img" src="images/heart.png" alt="heart"></i>
+        <i id='item_coins'><img class="item_img" src="images/coin.png" alt="coin"></i>
+        <i id='item_apples'><img class="item_img" src="images/apple.png" alt="apple"></i>
+        <i id='item_normal_sword'><img class="item_img" src="images/normal_sword.png" alt="normal sword"></i>
+        <i id='item_bow'><img class="item_img" src="images/bow.png" alt="bow"></i>
+        <i id='item_improved_bow'><img class="item_img" src="images/improved-bow.png" alt="improved bow"></i>
+        <i id='item_master_sword'><img class="item_img" src="images/master_sword.png" alt="master sword"></i>
+        <i id='item_lantern'><img class="item_img" src="images/lantern.png" alt="lantern"></i>
+    </section>
+
+    <section id="choices">
+        What would you like to do:
+        <div id="apple_pickup"><a class="choice" onclick="add_home_apple()" href="">Pick up the apple your uncle left for you.</a></div>
+        <div><a class="choice" href="crossroads.html">Exit your home.</a></div>
+    </section>
+
+    <script src="scripts/items.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>
