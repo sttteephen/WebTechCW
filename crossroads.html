@@ -10,7 +10,12 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    <header>Link's Choice Adventure</header>
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
 
     <section id="dialogue">
         <p>
@@ -43,7 +48,8 @@
         <div><a class="choice" href="swamp.html">Head West to the Great Swamp.</a></div>
         <div><a class="choice" href="castle.html">Head up the path to Hyrule Castle.</a></div>
     </section>
-    
+
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>   
     <script src="scripts/items.js"></script>
 </body>
 </html>

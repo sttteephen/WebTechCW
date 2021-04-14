@@ -9,7 +9,13 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    <header>Link's Choice Adventure</header>
+
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
 
     <section id="dialogue">
         <p>Inside the fortune tellers hut is dimley lit. The center of the room is occupied by a long
@@ -39,6 +45,7 @@
         <div><a class="choice" href="kakariko.html">Head back to the square.</a></div>
     </section>
 
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/cmhpvfhe/21.%20fortune%20teller.mp3"></audio>
     <script src="scripts/items.js"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main_style.css">
+    <title>YOU WIN</title>
+</head>
+<body onload="loadMuteImg()">
+
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
+
+    <section class="centered_text">
+        <p>Congratulations! You have defeated the Mighty Moldrom.</p>
+        <p>You have collected the Master Sword and are one stop closer to defeating Agahnim.</p>
+    </section>
+
+    <section class="choices">
+        <div><a class="choice" href="ruins.html">Return to the swamp ruins.</a></div>
+    </section>
+    
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/tdmvdiva/19.%20boss%20clear%20fanfare.mp3"></audio>
+    <script src="scripts/items.js"></script>
+</body>
+</html>

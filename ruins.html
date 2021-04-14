@@ -10,7 +10,13 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    <header>Link's Choice Adventure</header>
+
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
 
     <section id="dialogue">
         <p>As you cross the threshold you are plunged into almost complete darkness. 
@@ -38,10 +44,11 @@
 
     <section id="choices">
         What would you like to do:
-        <div><a class="choice" href="miniboss/start.html">Go deeper into the ruins.</a></div>
+        <div><a class="choice" href="miniboss_start.html">Go deeper into the ruins.</a></div>
         <div><a class="choice" href="swamp.html">Exit to the swamp.</a></div>
     </section>
 
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/dtphnqnb/16.%20cave.mp3"></audio>
     <script src="scripts/items.js"></script>
 </body>
 </html>

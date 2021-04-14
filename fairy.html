@@ -10,7 +10,7 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    
+
     <header>
         <a href="index.html">Link's Choice Adventure</a>
         <button id="mute_btn" onclick="toggleMute()">
@@ -19,9 +19,17 @@
     </header>
 
     <section id="dialogue">
-        <p>The walk to the castle is tough. The road is steep and muddy from the rain. By the time you reach the castle
-            doors it is dark and you feel a storm brewing above your head.
+        <p>Suddenly a figure appears floating above the pond as if out of nowhere. Her light green dress
+            flows down until almost touching the tip of the fountain. Behind her sprouts large green wings
+            that flutter slowly back and forth.
         </p>
+        <p>"Hello there did you drop something?" she says.</p>
+        <p>"Y-yes" you reply timidly.</p>
+        <p>"I like an honest person and for that I will give you something better in return.
+            I will sooth your wounds and increase your lifeforce. Use this gift wisely. Now go 
+            forth, defeat Agahnim and save us all, chosen one.
+        </p>
+        <p>"W-what" you say but before you get an answer the figure disappears.</p>
     </section>
 
     <section id="items">
@@ -38,12 +46,12 @@
 
     <section id="choices">
         What would you like to do:
-        <div id="enter_castle"><span class="choice" onclick="enterCastle()">Go through the castle doors.</span></div>
-        <div id="head_back"><a class="choice" href="crossroads.html">Head back the way you came.</a></div>
+        <div><a class="choice" onclick="gainFairyHearts()" href="swamp.html">Head back to the swamp.</a></div>
     </section>
-    
-    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/kdntedds/27.%20ganon%27s%20message.mp3"></audio>
+
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/gstvndxy/24.%20the%20goddess%20appears.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/castle.js"></script>
+    <script src="scripts/pond.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,32 @@
 
+function toggleMute() {
+
+    const audio = document.querySelector("audio")
+
+    if(localStorage.getItem('muted') == 'true') {
+        localStorage.setItem('muted', 'false');
+        document.getElementById('mute_img').src = 'images/volume_on.svg';
+
+        audio.volume = 0.2;
+        audio.play();
+    } else {
+        localStorage.setItem('muted', 'true');
+       document.getElementById('mute_img').src = 'images/volume_off.svg'; 
+
+        audio.pause();
+    }   
+}
+
+function loadMuteImg() {
+
+    if(localStorage.getItem('muted') == 'false') {
+        localStorage.setItem('muted', 'true')
+    }
+
+    document.getElementById('mute_img').src = 'images/volume_off.svg';
+}
+
 function init_items() {
-    console.log('hey');
     localStorage.setItem('item_lives', '3');
     localStorage.setItem('item_coins', '2');
     localStorage.setItem('item_apples', '0');
@@ -12,6 +38,8 @@ function init_items() {
     localStorage.setItem('home_apple', 'false');
     localStorage.setItem('old_mans_money', 'false');
     localStorage.setItem('fairy', 'false');
+
+    loadMuteImg();
 }
 
 function load_items() {
@@ -33,6 +61,7 @@ function load_items() {
             let text = document.createTextNode(`x${count}`);
             item_div.appendChild(text);
         }
+        
     }
 
     if(localStorage.getItem('item_master_sword') === '1') {
@@ -42,6 +71,8 @@ function load_items() {
     if(localStorage.getItem('item_improved_bow') === '1') {
         document.getElementById('item_bow').remove();
     }
+
+    loadMuteImg();
 }
 
 function add_home_apple() {

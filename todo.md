@@ -1,5 +1,4 @@
 TO DO
-- add sounds
 
 COMPLETED
 - apple disapears when collected 
@@ -12,3 +11,10 @@ COMPLETED
 - add win and lose screens
 - boss fires something at link
 - sword swipe action in game
+- add sounds
+
+TALKING POINTS:
+- audio caused an issue were pages took ages to load
+- by reloading the same page to add an item or dialouge to screen music can be interupted
+should have used other options where dialouge is added to the same screen
+- apple doesn't do anything :\

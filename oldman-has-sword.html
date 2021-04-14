@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main_style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    
+
     <header>
         <a href="index.html">Link's Choice Adventure</a>
         <button id="mute_btn" onclick="toggleMute()">
@@ -18,10 +17,16 @@
         </button>
     </header>
 
-    <section id="dialogue">
-        <p>The walk to the castle is tough. The road is steep and muddy from the rain. By the time you reach the castle
-            doors it is dark and you feel a storm brewing above your head.
-        </p>
+    <section>
+        <div id="first_talk">
+            <p>"Excuse me" you say.</p>
+            <p>"Well well well look who it is. Did you find your Master Sword then." The old man says mockingly.</p>
+            <p>You pull the master sword from its sheath to show the old man.</p>
+            <p>His eyes fixate on the blue balde. "Oh my gods its real. Maybe you are the chosen one. Look kid I don't have much
+                but take this I hope it helps you along your journey."</p>
+            <p>From his pocket the old man produces a hand full of gold coins.</p>
+        </div>
+
     </section>
 
     <section id="items">
@@ -38,12 +43,10 @@
 
     <section id="choices">
         What would you like to do:
-        <div id="enter_castle"><span class="choice" onclick="enterCastle()">Go through the castle doors.</span></div>
-        <div id="head_back"><a class="choice" href="crossroads.html">Head back the way you came.</a></div>
+        <div><a class="choice" onclick="take_coins()" href="inn.html">Take the coins</a></div>
     </section>
-    
-    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/kdntedds/27.%20ganon%27s%20message.mp3"></audio>
+
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/castle.js"></script>
 </body>
 </html>

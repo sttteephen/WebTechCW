@@ -10,7 +10,13 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="init_items()">
-    <header>Link's Choice Adventure</header>
+    
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
 
     <section id="dialogue">
         <p>
@@ -45,6 +51,7 @@
         <div><a class="choice" href="home.html">START GAME</a></div>
     </section>
 
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/efgpctlp/03.%20time%20of%20the%20falling%20rain.mp3"></audio>
     <script src="scripts/items.js"></script>
 </body>
 </html>

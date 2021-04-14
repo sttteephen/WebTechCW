@@ -17,15 +17,25 @@
         </button>
     </header>
 
-    <section id="dialogue">
-        <p>As you enter the blacksmiths you are hit with a wall of heat. A large fire place on the other side of the room roars, spewing 
-            glowing emebers onto the cobble floor.</p>
+    <section>
+        <div id="first_talk">
+            <p>"Excuse me"</p>
+            <p>He doesn't respond. Upon closer inspection you see the old mans eyes are closed and he is actually fast asleep. 
+                You give him a gentle tap on the shoulder.</p>
+            <p>"WAAA WHAAAT. Who's there!" He exclaims as his head shoots up and his arms start failing about him wildly.</p>
+            <p>"S-sorry, I didn't mean to spook you I was just wondering if you had ever heard of the master sword."</p>
+            <p>"Whats it to you kid."</p>
+            <p>"I need to find it to defeat Agahnim."</p>
+            <p>"Ahahahaha whatever you say kid. Look if I tell you what I know will you leave me alone."</p>
+            <p>"Definitely."</p>
+            <p>"Well ok then, legend has it the sword was crafted by the Gods themselves or something, meant to be super powerful. 
+                I remember a while back some adventurer came in here, said he'd tracked the sword down to somewhere in the swamp ruins and
+                was off to find it. Well that was years ago now don't think anyones heard from him since."</p>
+            <p>"That's great thanks!" You say. "Looks like I need to explore the ruins."</p>
+            <p>"Hey the ruins no place for a kid. If you're gonna go take this." The old man produces a small lantern from his jacket. 
+                "It'll be pitch black in there, and hey if you make it out be sure to tell me if you found your master sword ahahahaha."</p>
+        </div>
 
-        <p>"Greetings stangers." says the blacksmith looking up from the anvil he was working at. "I see that bow on your back, looks
-            like it has seen better days. I could make some major improvments for just 5 coins, just let me know."
-        </p>
-
-        <p>"Well that's me finished. You  should feel the difference straight away, and hey be careful where you point that thing."</p>
     </section>
 
     <section id="items">
@@ -42,11 +52,10 @@
 
     <section id="choices">
         What would you like to do:
-        <div><a class="choice" href="kakariko.html">Head back to the square.</a></div>
+        <div><a class="choice" onclick="take_lantern()" href="inn.html">Take the lantern</a></div>
     </section>
 
     <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/smith.js"></script>
 </body>
 </html>

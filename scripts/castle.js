@@ -25,7 +25,7 @@ function enterCastle() {
     let choice = document.createElement('a');
 
     choice.appendChild(document.createTextNode('START BATTLE'));
-    choice.href = "finalboss/finalboss.html";
+    choice.href = "finalboss.html";
 
     choice_div.appendChild(choice);
     document.getElementById('choices').appendChild(choice_div);

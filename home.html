@@ -10,7 +10,13 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body  onload="load_items()">
-    <header>Link's Choice Adventure</header>
+    
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
 
     <section id="dialogue">
         <p>You stand in the middle of your small one room home that you share with your uncle. He's not in and must have already left.</p>
@@ -35,6 +41,7 @@
         <div><a class="choice" href="crossroads.html">Exit your home.</a></div>
     </section>
 
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
     <script src="scripts/home.js"></script>
 </body>

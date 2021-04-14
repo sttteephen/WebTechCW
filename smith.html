@@ -9,7 +9,13 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    <header>Link's Choice Adventure</header>
+
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
 
     <section id="dialogue">
         <p>As you enter the blacksmiths you are hit with a wall of heat. A large fire place on the other side of the room roars, spewing 
@@ -42,6 +48,7 @@
         <div><a class="choice" href="kakariko.html">Head back to the square.</a></div>
     </section>
 
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
     <script src="scripts/smith.js"></script>
 </body>

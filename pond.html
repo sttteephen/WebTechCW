@@ -10,7 +10,7 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    
+
     <header>
         <a href="index.html">Link's Choice Adventure</a>
         <button id="mute_btn" onclick="toggleMute()">
@@ -19,8 +19,17 @@
     </header>
 
     <section id="dialogue">
-        <p>The walk to the castle is tough. The road is steep and muddy from the rain. By the time you reach the castle
-            doors it is dark and you feel a storm brewing above your head.
+        <p>The air inside the cave smells stale and damp. The walls around you are wet to the touch.
+            Now and then the sent of animals musk fills you nose. You begin to worry a bear or other animals
+            call this cave home. This thought isn't help by the rustling coming from all around you.
+        </p>
+        <p>The further into the cave you go the darker it gets and you begin to think about heading back
+            unitl you see a light at the end of the tunnel. As you go deeper the light grows until you came make
+            out two sconces holding flaming tourches. As you pass the tourches you enter into a large open space.
+            Here the walls are no longer the jagged brown rock of the cave before it but smooth grey bricks forming a 
+            large cirle. The musk of animals has disappeared and has been replaced with the smell of fresh roses.
+            In the middle of the room stands a large ornate foundtain. Clear water spouts from the top and casscades 
+            down the fountains many marble layers until reaching a large cirular pool at the bottom.
         </p>
     </section>
 
@@ -38,12 +47,14 @@
 
     <section id="choices">
         What would you like to do:
-        <div id="enter_castle"><span class="choice" onclick="enterCastle()">Go through the castle doors.</span></div>
-        <div id="head_back"><a class="choice" href="crossroads.html">Head back the way you came.</a></div>
+        <div id="first_coin_toss"><a class="choice" onclick="tossCoins()" href="fairy.html">Through some coins into the pond.</a></div>
+        <div id="second_coin_toss"><a class="choice" onclick="tossCoins()" href="cointoss.html">Through some coins into the pond.</span></div>
+        <div><a class="choice" href="swamp.html">Head back to the swamp.</a></div>
     </section>
     
-    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/kdntedds/27.%20ganon%27s%20message.mp3"></audio>
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/gstvndxy/24.%20the%20goddess%20appears.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/castle.js"></script>
+    <script src="scripts/pond.js"></script>
+
 </body>
 </html>

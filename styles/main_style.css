@@ -9,7 +9,29 @@ header {
     color: white;
     text-shadow: 2px 2px black;
     font-size: 1.5em;
-    padding: 10px;
+    padding: 10px 0px 10px 10px;
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header button {
+    float: right;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+}
+
+button:active {
+    color: black;
 }
 
 section {
@@ -52,6 +74,10 @@ canvas {
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#choices div {
+    margin: 5px 0px 5px 0px;
 }
 
 .choice {

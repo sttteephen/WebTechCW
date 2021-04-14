@@ -392,7 +392,7 @@ function checkWin() {
     if(enemy_lives <= 0) {
         // give player the master sword and load the winners page
         localStorage.setItem('item_master_sword', '1');
-        window.location.href = 'win.html'
+        window.location.href = 'miniboss_win.html'
     }
 }
 
@@ -413,7 +413,7 @@ function loseHeart() {
     // if the player has run out of lives load the loser page
     if(link_lives == 0)
     {
-        window.location.href = 'lose.html'
+        window.location.href = 'miniboss_lose.html'
     }
 }
 

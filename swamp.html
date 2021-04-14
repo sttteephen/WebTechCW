@@ -10,7 +10,13 @@
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    <header>Link's Choice Adventure</header>
+
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
 
     <section id="dialogue">
         <p>As you walk deeper into the swamp your feet sink further and further into the layers of mud.
@@ -42,10 +48,11 @@
     <section id="choices">
         What would you like to do:
         <div><a class="choice" href="ruins.html">Enter the ruins.</a></div>
-        <div><a class="choice" href="pond/pond.html">Enter the cave.</a></div>
+        <div><a class="choice" href="pond.html">Enter the cave.</a></div>
         <div><a class="choice"href="crossroads.html">Head back the way you came.</a></div>
     </section>
 
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
 </body>
 </html>

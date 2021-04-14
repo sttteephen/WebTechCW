@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main_style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Link's Choice Adventure</title>
 </head>
 <body onload="load_items()">
-    
+
     <header>
         <a href="index.html">Link's Choice Adventure</a>
         <button id="mute_btn" onclick="toggleMute()">
@@ -19,9 +18,7 @@
     </header>
 
     <section id="dialogue">
-        <p>The walk to the castle is tough. The road is steep and muddy from the rain. By the time you reach the castle
-            doors it is dark and you feel a storm brewing above your head.
-        </p>
+        <p>You stand inside the Kakariko Inn. The air is thick with the smell of stale ale and smoke rising from the pipe of the old man currentley occupying the stool right next to the bar. </p>
     </section>
 
     <section id="items">
@@ -38,12 +35,15 @@
 
     <section id="choices">
         What would you like to do:
-        <div id="enter_castle"><span class="choice" onclick="enterCastle()">Go through the castle doors.</span></div>
-        <div id="head_back"><a class="choice" href="crossroads.html">Head back the way you came.</a></div>
+        <div id="talk_to_old_man"><a onclick="talkedTo()" class="choice" href="oldman-init.html">Talk to the old man.</a></div>
+        <div id="have_lantern"><span onclick="oldManDrunk()" class="choice">Talk to the old man.</span></div>
+        <div id="have_master_sword"><a class="choice" href="oldman-has-sword.html">Talk to the old man.</a></div>
+        <div id="order_drink"><span class="choice" onclick="orderDrink()" href="">Order a drink.</span></div>
+        <div><a class="choice" href="../kakariko.html">Head back to the square.</a></div>
     </section>
-    
-    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/kdntedds/27.%20ganon%27s%20message.mp3"></audio>
+
+    <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/castle.js"></script>
+    <script src="scripts/inn.js"></script>
 </body>
 </html>

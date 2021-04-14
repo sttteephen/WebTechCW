@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Boss Fight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main_style.css">
+  </head>
+
+  <body onload="loadMuteImg()">
+    <header>
+        <a href="index.html">Link's Choice Adventure</a>
+        <button id="mute_btn" onclick="toggleMute()">
+            <img id="mute_img" alt="mute button">
+        </button>
+    </header>
+
+    <canvas id="can" width="500" height="500">
+    </canvas>
+  </body>
+
+  <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hlatjazz/18.%20boss%20bgm.mp3"></audio>
+  <script src="scripts/finalboss_script.js"></script>
+  <script src="scripts/items.js"></script>
+</html>
