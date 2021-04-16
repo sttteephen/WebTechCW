@@ -21,3 +21,5 @@ i could update a specific part of the page
 - apple doesn't do anything :\
 - all images are loaded then removed depending on what the player has
 - games are very similar and share functions but code is repeated in separate files
+- google icons
+- didnt use a list for items in final implementation
