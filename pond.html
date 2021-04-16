@@ -57,7 +57,8 @@
     
     <script>
         // determines which dialouge to display if they player has already talked to the fairy
-         if(localStorage.getItem('item_coins') == '0') {
+        let coins = parseInt(localStorage.getItem('item_coins'));
+         if(coins < 2) {
             document.getElementById('first_coin_toss').remove();
             document.getElementById('second_coin_toss').remove();
 
