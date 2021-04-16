@@ -23,3 +23,4 @@ i could update a specific part of the page
 - games are very similar and share functions but code is repeated in separate files
 - google icons
 - didnt use a list for items in final implementation
+- challenges, dealing with large amounts of files
