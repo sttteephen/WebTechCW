@@ -47,14 +47,32 @@
 
     <section id="choices">
         What would you like to do:
-        <div id="first_coin_toss"><a class="choice" onclick="tossCoins()" href="fairy.html">Through some coins into the pond.</a></div>
-        <div id="second_coin_toss"><a class="choice" onclick="tossCoins()" href="cointoss.html">Through some coins into the pond.</span></div>
+        <div id="first_coin_toss"><a class="choice" onclick="payCoins()" href="fairy.html">Through some coins into the pond.</a></div>
+        <div id="second_coin_toss"><a class="choice" onclick="payCoins()" href="cointoss.html">Through some coins into the pond.</span></div>
         <div><a class="choice" href="swamp.html">Head back to the swamp.</a></div>
     </section>
     
     <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/gstvndxy/24.%20the%20goddess%20appears.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/pond.js"></script>
+    
+    <script>
+        // determines which dialouge to display if they player has already talked to the fairy
+         if(localStorage.getItem('item_coins') == '0') {
+            document.getElementById('first_coin_toss').remove();
+            document.getElementById('second_coin_toss').remove();
+
+            let para1 = document.createElement('P');
+
+            para1.appendChild(document.createTextNode("You think about throwing some coins in the pool in hope it would give you some luck. If only you had some coins."));
+        
+            document.getElementById('dialogue').appendChild(para1);
+        
+        } else if(localStorage.getItem('fairy') == 'false') {
+            document.getElementById('second_coin_toss').remove();
+        } else {
+            document.getElementById('first_coin_toss').remove();
+        }
+    </script>
 
 </body>
 </html>

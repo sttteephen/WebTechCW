@@ -44,6 +44,23 @@
 
     <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/inn.js"></script>
+    
+    <script>
+        // determines which choices to display based on the items the player has
+        let hasLantern = localStorage.getItem('item_lantern');
+        let hasMasterSword = localStorage.getItem('item_master_sword');
+        let hasOldMansMoney = localStorage.getItem('old_mans_money');
+
+        if(hasLantern == '0') {
+            document.getElementById('have_lantern').remove();
+            document.getElementById('have_master_sword').remove();
+        } else if(hasMasterSword == '0' || hasOldMansMoney == 'true') {
+            document.getElementById('talk_to_old_man').remove();
+            document.getElementById('have_master_sword').remove();
+        } else {
+            document.getElementById('talk_to_old_man').remove();
+            document.getElementById('have_lantern').remove();
+        }
+    </script>
 </body>
 </html>

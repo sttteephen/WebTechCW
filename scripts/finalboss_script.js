@@ -1,3 +1,7 @@
+/* 
+ * Javascript for the final boss battle against Agahnim.
+ */
+
 const WIN_WIDTH = 1000;
 const WIN_HEIGHT = 750;
 
@@ -21,7 +25,7 @@ let linky = WIN_HEIGHT - 50;
 let linkv = 50;
 
 // emenies lives, coordinates and velocity
-let enemy_lives = 10;
+let enemy_lives = 16;
 let enemyx = WIN_WIDTH / 2;
 let enemyy = 60;
 let velx = 2;
@@ -30,22 +34,25 @@ let vely = 2;
 let arrows = [];    // list of arrow objects on the screen
 let rm_arrows = [];     // list of  arrow objects that have left the screen to be deleted
 
+let magicv = 8; // velocity of enemies magic orbs
+
+// set arrows damage and colour depending on what bow the player has
 let arrow_dmg = 1;
 let arrow_colour = 'silver';
-
-let magicv = 8;
-
 if(localStorage.getItem('item_improved_bow') == '1') {
     arrow_dmg = 2;
     arrow_colour = 'cyan';
 }
 
+// set sword damage and colour depending on what sword player has
 let sword_colour = '#EFF1F1';
 let sword_dmg = 1;
 if(localStorage.getItem('item_master_sword') == '1') {
     sword_colour = '#BEEBFA';
     sword_dmg = 2;
 }
+
+let blocking = false; // true if the player is currentley using sword to block
 
 // creates a new arrow object
 function Arrow(x, y) {
@@ -185,6 +192,33 @@ function drawLink() {
     c.fillStyle = '#F5C78C';
     c.stroke();
     c.fill();
+}
+
+// draw the players sword when they are blocking
+function drawSword() {
+    // sword hilt
+    c.beginPath();
+    c.rect(linkx+40, linky-30, 4, 10);
+    c.stroke();
+    c.fillStyle = 'brown';
+    c.fill();
+    // sword 
+    c.beginPath();
+    c.moveTo(linkx+38, linky-30);
+    c.lineTo(linkx+38, linky-90);
+    c.lineTo(linkx+42, linky-100);
+    c.lineTo(linkx+46, linky-90);
+    c.lineTo(linkx+46, linky-30);
+    c.fillStyle = sword_colour;
+    c.fill();
+    c.stroke();
+    if(localStorage.getItem('item_master_sword') == '1') {
+        // protective bubble
+        c.beginPath();
+        c.arc(linkx, linky-17, 80, 0, Math.PI * 2, false);
+        c.strokeStyle = 'blue';
+        c.stroke();
+    }
 }
 
 // draws the enemy sprite then updates its position
@@ -387,7 +421,7 @@ function enemyLoseHeart(dmg) {
         velx -= 3;
     }
 
-    // increase the speed of the enemys magic orbs
+    // increase the speed of the enemies magic orbs
     magicv += 2;
 
     // change enemy direction after each hit
@@ -408,6 +442,7 @@ function drawHearts() {
     }
 }
 
+// take a heart from player
 function loseHeart() {
     link_lives -= 1;
     console.log(link_lives);
@@ -419,34 +454,7 @@ function loseHeart() {
     }
 }
 
-function drawSword() {
-    // sword hilt
-    c.beginPath();
-    c.rect(linkx+40, linky-30, 4, 10);
-    c.stroke();
-    c.fillStyle = 'brown';
-    c.fill();
-    // sword 
-    c.beginPath();
-    c.moveTo(linkx+38, linky-30);
-    c.lineTo(linkx+38, linky-90);
-    c.lineTo(linkx+42, linky-100);
-    c.lineTo(linkx+46, linky-90);
-    c.lineTo(linkx+46, linky-30);
-    c.fillStyle = sword_colour;
-    c.fill();
-    c.stroke();
-    if(localStorage.getItem('item_master_sword') == '1') {
-        // protective bubble
-        c.beginPath();
-        c.arc(linkx, linky-17, 80, 0, Math.PI * 2, false);
-        c.strokeStyle = 'blue';
-        c.stroke();
-    }
-}
-
-let blocking = false;
-let magic = [];
+let magic = [];     // list of magic orbs on the screen
 
 // creates a new arrow object
 function Magic() {
@@ -454,11 +462,13 @@ function Magic() {
     this.y = enemyy;
 }
 
+// creates a new magic orb and adds it to the list
 function fireMagic() {
     new_magic = new Magic();
     magic.push(new_magic);
 }
 
+// moves magic orbs towards the player
 function animateMagic() {
     // loops over all the arrows in the list
     for(let i = 0; i < magic.length; i++)
@@ -466,11 +476,13 @@ function animateMagic() {
         let x = magic[i].x;
         let y = magic[i].y;
 
-        drawMagic(x, y);
+        drawMagic(x, y);    // draws orb on the screen
 
+        // moves the orb towards the player
         (x < linkx) ? magic[i].x += magicv : magic[i].x -= magicv;
         (y < linky) ? magic[i].y += magicv : magic[i].y -= magicv;
 
+        // determines if the orb has hit the player and if they are blocking or should lose a life
         if(linky > y - 70 && linky < y + 70 && linkx > x - 70 && linkx < x + 70) {
             magic.pop();
 
@@ -483,6 +495,7 @@ function animateMagic() {
     }
 }
 
+// draws a magic orb at the given position
 function drawMagic(x, y) {
     // magic orb
     c.beginPath();
@@ -493,7 +506,7 @@ function drawMagic(x, y) {
     c.fill();
 }
 
-// clears the canvas, draw the next frame and check for collisions
+// animation loop - clears the canvas, draw the next frame and check for collisions
 function animate() {
     c.clearRect(0, 0, WIN_WIDTH, WIN_HEIGHT);
     drawLink();
@@ -558,5 +571,5 @@ function keyUpHandler (e) {
     }
 }
 
-setInterval(animate, 20);
-setInterval(fireMagic, 4000);
+setInterval(animate, 20);   // draw a new frame every 20 miliseconds
+setInterval(fireMagic, 4000);   // fires a magic orb every 4 seconds

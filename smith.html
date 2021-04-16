@@ -50,6 +50,23 @@
 
     <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/smith.js"></script>
+
+    <script>
+        // determines which text and choices should be displayed depending on if player has upgraded the bow
+        let coins = localStorage.getItem('item_coins');
+        let hasBow = localStorage.getItem('item_improved_bow')
+
+        if(coins < 5 || hasBow == '1') {
+            document.getElementById('buy_bow').remove();
+        }
+
+        if(hasBow == '1') {
+            document.getElementById('before_bow').remove();
+        } else {
+            document.getElementById('after_bow').remove();
+        }
+    </script>
+
+    <script src="scripts/items.js"></script>
 </body>
 </html>

@@ -43,6 +43,14 @@
 
     <audio preload="none" src="https://vgmsite.com/soundtracks/legend-of-zelda-a-link-to-the-past-original-soundtrack/hadzcvzj/04.%20overworld.mp3"></audio>
     <script src="scripts/items.js"></script>
-    <script src="scripts/home.js"></script>
+
+    <script>
+        // checks if player has already picked up the apple
+        if(localStorage.getItem('home_apple') == 'true') {
+            document.getElementById('apple_pickup').remove();
+            document.getElementById('apple_para').remove();
+        }
+    </script>
+
 </body>
 </html>

@@ -1,3 +1,7 @@
+/* 
+ * Javascript for the battle against Moldrom.
+ */
+
 const WIN_WIDTH = 1000;
 const WIN_HEIGHT = 750;
 
@@ -336,7 +340,7 @@ function checkCollision() {
 // true if the enemy has been hit with the an arrow in the last 2 seconds
 let justHit = false;
 
-// called 2 seconds after a hit to toggle value which allows another hit to occur
+// called 1 seconds after a hit to toggle value which allows another hit to occur
 function toggleJustHit() {
     justHit = false;
 }
@@ -375,7 +379,7 @@ function enemyLoseHeart(dmg) {
     vely = -temp;
 
     justHit = true;
-    setTimeout(toggleJustHit, 2000);
+    setTimeout(toggleJustHit, 1000);
     return;
 }
 
@@ -417,7 +421,7 @@ function loseHeart() {
     }
 }
 
-// animation if the player has not collected the lantern
+// animation loop if the player has not collected the lantern
 function noLantern() {
     
     // cover the screen in black
@@ -441,7 +445,7 @@ function noLantern() {
     drawHearts();
 }
 
-// animation if the player has collected the lantern
+// animation loop if the player has collected the lantern
 // clears the canvas, draw the next frame and check for arrow hits or collisions
 function animate() {
     c.clearRect(0, 0, WIN_WIDTH, WIN_HEIGHT);
@@ -462,10 +466,11 @@ document.addEventListener("keyup", keyUpHandler, false);
 // check if the player is pressing down any buttons
 function keyDownHandler(e) {
 
-    if(blocking == false) {     // only let the player move when not blocking
-        if(e.keyCode == 66) {
+    if(blocking == false) {     // only lets the player move when not blocking with sword
+        if(e.keyCode == 66) {   // block with sword when b is pressed
             blocking = true;
         }
+        // move in the direction of the pressed arrow key
         else if(e.key == 'Right' || e.key == 'ArrowRight') {
             if(linkx + 75 < WIN_WIDTH) {
                 linkx += linkv;
@@ -487,12 +492,12 @@ function keyDownHandler(e) {
                 linky += linkv;
             }
         }
-        // fire a arrow when the space bar is hit 
-        else if(e.keyCode == 32) {
+        else if(e.keyCode == 32) {  // fire an arrow when the space bar is hit 
             if(justFired == false) {
                 new_arrow = new Arrow(linkx, linky);
                 arrows.push(new_arrow);
                 
+                // allow another arrow to be fired in half a second
                 justFired = true;
                 setTimeout(toggleJustFired, 500);
             }
