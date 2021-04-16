@@ -138,9 +138,9 @@ function gainFairyHearts() {
 }
 
 // takes 2 coins from player when they get their fortune told or throw coins into fountain
-function payCoins() {
+function payCoins(amount) {
     let coins = parseInt(localStorage.getItem('item_coins'));
-    coins -= 2;
+    coins -= amount;
     localStorage.setItem('item_coins', coins.toString());
 }
 
@@ -155,10 +155,10 @@ function tellFortune() {
         para1.appendChild(document.createTextNode("\"Hmmmm I foresee that you will be not be able to pay for my services. Leave now before I put a curse on you!\""));
     } else if(localStorage.getItem('item_master_sword') == '0'){
         para1.appendChild(document.createTextNode("\"Abracadabra alakazam! I foresee that that a true hero will free the master sword from the monster in the darkness of the swamp ruins. Don't forget to leave a tip on your way out.\""));
-        payCoins();
+        payCoins(2);
     } else {
         para1.appendChild(document.createTextNode("\"Hocus pocus! A great battle in the castle hall will decide the fate of the kingdom. Don't forget to leave a tip on your way out.\""));
-        payCoins();
+        payCoins(2);
     }
 
     document.getElementById('dialogue').appendChild(para1);

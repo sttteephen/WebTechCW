@@ -47,8 +47,8 @@
 
     <section id="choices">
         What would you like to do:
-        <div id="first_coin_toss"><a class="choice" onclick="payCoins()" href="fairy.html">Through some coins into the pond.</a></div>
-        <div id="second_coin_toss"><a class="choice" onclick="payCoins()" href="cointoss.html">Through some coins into the pond.</span></div>
+        <div id="first_coin_toss"><a class="choice" onclick="payCoins(1)" href="fairy.html">Through some coins into the pond.</a></div>
+        <div id="second_coin_toss"><a class="choice" onclick="payCoins(1)" href="cointoss.html">Through some coins into the pond.</span></div>
         <div><a class="choice" href="swamp.html">Head back to the swamp.</a></div>
     </section>
     
@@ -58,7 +58,7 @@
     <script>
         // determines which dialouge to display if they player has already talked to the fairy
         let coins = parseInt(localStorage.getItem('item_coins'));
-         if(coins < 2) {
+         if(coins < 1) {
             document.getElementById('first_coin_toss').remove();
             document.getElementById('second_coin_toss').remove();
 
