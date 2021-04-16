@@ -16,7 +16,7 @@ let heart_img = new Image();
 heart_img.onload = function() {
     c.drawImage(heart_img,0,0);
 }
-heart_img.src = "../images/heart.png";
+heart_img.src = "images/heart.png";
 
 // players lives, coordinates and velocity 
 let link_lives = localStorage.getItem('item_lives');
